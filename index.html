@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-<video autoplay loop id="myVideo">
-  <source src="https://github.com/cakecable/webDesign1/raw/refs/heads/main/videos/fireEdit.mp4" type="video/mp4">
-</video>
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+      <video autoplay loop id="myVideo">
+        <source src="https://github.com/cakecable/webDesign1/raw/refs/heads/main/videos/fireEdit.mp4" type="video/mp4">
+      </video>
+    </body>
+    <body>
+      <div class="nav-bar">
+        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/github.png?raw=true" alt="Github"></a>
+        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/discord.png?raw=true" alt="Discord"></a>
+        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/roblox.png?raw=true" alt="Roblox"></a>
+        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/spotify.png?raw=true" alt="Spotify"></a>
+      </div>
+    </body>
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-  overflow: hidden;
-}
-
-#myVideo {
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    overflow: hidden;
+  }
+  
+  #myVideo {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -23,9 +31,9 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1; 
-}
-
-.nav-bar {
+  }
+  
+  .nav-bar {
     display: flex;
     position: fixed;
     bottom: 5%;
@@ -42,41 +50,28 @@ body {
     opacity: 0.67;
     transition: all 0.5s;
     z-index: 1;
-}
-
-.nav-icon {
+  }
+  
+  .nav-icon {
     margin: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all ease-in-out 0.3s;
-}
-
-.nav-icon img {
+  }
+  .nav-icon img {
     width: 24px;
     height: 24px;
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
-}
-
-.nav-icon img:hover {
+  }
+  .nav-icon img:hover {
     transform: scale(1.1);
-}
-.nav-bar:hover {
-  width: 300px;
-  transition: all 0.5s;
-}
+  }
+  .nav-bar:hover {
+    width: 300px;
+    transition: all 0.5s;
+  }
 </style>
-</head>
-<body>
-    <body>
-    <div class="nav-bar">
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/github.png?raw=true" alt="Github">
-</a>
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/discord.png?raw=true" alt="Discord"></a>
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/roblox.png?raw=true" alt="Roblox"></a>
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/spotify.png?raw=true" alt="Spotify"></a>
-    </div>
-</body>
 </html>
