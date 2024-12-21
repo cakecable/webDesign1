@@ -1,105 +1,152 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>@CAKE</title>
-    <link rel="icon" href="https://github.com/cakecable/webDesign1/blob/main/assets/besticon.png?raw=true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="@CAKE — Web Developer">
-    <meta property="og:description" content="Website showcase to perfect my skills"> 
-    <meta property="og:image" content="https://github.com/cakecable/webDesign1/blob/main/assets/besticon.png?raw=true">
-    <meta property="og:url" content="https://cake.us/">
-    <meta property="theme-color" content="#FFE475">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+  <title>@CAKE</title>
+  <link rel="icon" href="https://github.com/cakecable/webDesign1/blob/main/assets/besticon.png?raw=true"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="@CAKE — Web Developer">
+  <meta property="og:description" content="Website showcase to perfect my skills"> 
+  <meta property="og:image" content="https://github.com/cakecable/webDesign1/blob/main/assets/besticon.png?raw=true">
+  <meta property="og:url" content="https://cake.us/">
+  <meta property="theme-color" content="#FFE475">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+      overflow: hidden;
+    }
 
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .nav-bar {
+      display: flex;
+      position: fixed;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: space-around;
+      align-items: center;
+      background-color: #121314;
+      width: 260px;
+      height: 50px;
+      border-radius: 50px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(0, 0, 0, 0.5) 5px 10px 15px;
+      opacity: 0.67;
+      transition: all 0.5s;
+      z-index: 1;
+    }
+
+    .nav-icon {
+      position: relative;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .nav-icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-icon .tooltip {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #121314;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .nav-icon:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-bar:hover {
+      width: 300px;
+      transition: all 0.5s;
+    }
+    
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        animation: fade-in 1s forwards ease-in;
+    }
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+    }
+}
+  </style>
 </head>
-    <body>
-      <video autoplay loop id="myVideo">
-        <source src="https://github.com/cakecable/webDesign1/raw/refs/heads/main/videos/fireEdit.mp4" type="video/mp4">
-      </video>
-    </body>
-    <body>
-      <div class="nav-bar">
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/github.png?raw=true" alt="Github"></a>
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/discord.png?raw=true" alt="Discord"></a>
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/roblox.png?raw=true" alt="Roblox"></a>
-        <a href="github.com/cakecable" class="nav-icon"><img src="https://github.com/cakecable/webDesign1/blob/main/assets/spotify.png?raw=true" alt="Spotify"></a>
-      </div>
-    </body>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial;
-    font-size: 17px;
-    overflow: hidden;
-  }
-  
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; 
-  }
-  
-  .nav-bar {
-    display: flex;
-    position: fixed;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #121314;
-    width: 260px;
-    height: 50px;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(0, 0, 0, 0.5) 5px 10px 15px;
-    opacity: 0.67;
-    transition: all 0.5s;
-    z-index: 1;
-  }
-  
-  .nav-icon {
-    margin: 0 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all ease-in-out 0.3s;
-  }
-  .nav-icon img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  .nav-icon img:hover {
-    transform: scale(1.1);
-  }
-  .nav-bar:hover {
-    width: 300px;
-    transition: all 0.5s;
-  }
-</style>
-<script>
-  $(function () {
-    var message = "hey come back dumbass";
-    var original;
+<body>
+  <video autoplay loop id="myVideo">
+    <source src="https://github.com/cakecable/webDesign1/raw/refs/heads/main/videos/fireEdit.mp4" type="video/mp4">
+  </video>
+  <div class="nav-bar">
+    <a href="https://github.com/cakecable" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/github.png?raw=true" alt="Github">
+      <span class="tooltip">GitHub</span>
+    </a>
+    <a href="https://discordapp.com/users/1078313475727691787" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/discord.png?raw=true" alt="Discord">
+      <span class="tooltip">Discord</span>
+    </a>
+    <a href="https://roblox.com" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/roblox.png?raw=true" alt="Roblox">
+      <span class="tooltip">Roblox</span>
+    </a>
+    <a href="https://open.spotify.com/user/3r1swupysntwph40fvw1aypcq" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/spotify.png?raw=true" alt="Spotify">
+      <span class="tooltip">Spotify</span>
+    </a>
+  </div>
+  <script>
+    $(function () {
+      var message = "hey come back dumbass";
+      var original;
 
-    $(window).focus(function() {
-      if(original) {
-        document.title = original;
-      }
-    }).blur(function() {
-      var title = $('title').text();
-      if(title != message) {
-        original = title;
-      }
-      document.title = message;
+      $(window).focus(function() {
+        if(original) {
+          document.title = original;
+        }
+      }).blur(function() {
+        var title = $('title').text();
+        if(title != message) {
+          original = title;
+        }
+        document.title = message;
+      });
     });
-  });
-</script>
+  </script>
+</body>
 </html>
